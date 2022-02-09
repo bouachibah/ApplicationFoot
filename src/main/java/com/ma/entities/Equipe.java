@@ -5,10 +5,13 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -36,7 +39,9 @@ public class Equipe {
 	@Id 
 	private long indicatif;
 	private String nom_pays;
+	@Column(length = 10)
 	private String nom_entraineur;
+	@Temporal(TemporalType.DATE)
 	private Date dateCreation;
 	@OneToMany(mappedBy = "equipe",fetch = FetchType.LAZY)
 	private List<Joueur> lesJoueurs;
