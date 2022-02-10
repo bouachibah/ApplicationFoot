@@ -26,23 +26,24 @@ import lombok.ToString;
 //pour generer un const ss arguments
 @ToString
 //generer une methode to String
+   
 public class Equipe {
-
-	public Equipe(long indicatif, String nom_pays, String nom_entraineur, Date dateCreation) {
+	
+	public Equipe(long indicatif, String nom_pays, String nom_entraineur) {
 		super();
 		this.indicatif = indicatif;
 		this.nom_pays = nom_pays;
 		this.nom_entraineur = nom_entraineur;
-		this.dateCreation = dateCreation;
+		
 	}
 	// ici je declare le id comme 
 	@Id 
 	private long indicatif;
 	private String nom_pays;
-	@Column(length = 10)
+	@Column(length = 50)
 	private String nom_entraineur;
 	@Temporal(TemporalType.DATE)
-	private Date dateCreation;
+	private Date dateCreation=new Date();
 	@OneToMany(mappedBy = "equipe",fetch = FetchType.LAZY)
 	private List<Joueur> lesJoueurs;
 	

@@ -24,24 +24,22 @@ public class ApplicationFootApplication {
 	@Autowired
 	JoueurRepository joueurRepositor;
 	
-	@Bean
-	CommandLineRunner start(JoueurRepository joueurRepository,EquipeRepository equipeRepository) {
-		//teste
-		return args->{
-			
-			  Equipe equipe1=new Equipe(212, "MAROC", "ZAKI", new Date());
-			  Equipe  equipe2=new Equipe(033, "FRANCE", "ZIDANE", new Date());
-			  Equipe equipe3=new Equipe(213, "CAMEROUNE", "ROLANDO", new Date());
-			  Equipe equipe4=new Equipe(214, "Algerie", "ROLANDO", new Date());
-			  equipeRepository.save(equipe1); 
-			  equipeRepository.save(equipe2);
-			  equipeRepository.save(equipe3);
-			  equipeRepository.save(equipe4);
-			  joueurRepository.save(new Joueur(null, "ziache", "hakim", 25,equipe1 ));
-			  joueurRepository.save(new Joueur(null, "MBAPE", "kylian", 26,equipe2 ));
-			  joueurRepository.save(new Joueur(null, "Vincent", " aboubakar", 27,equipe3 ));
-			 
-		};
-	}
+	/*
+	 * @Bean CommandLineRunner start(JoueurRepository
+	 * joueurRepository,EquipeRepository equipeRepository) { //teste return args->{
+	 * 
+	 * Equipe equipe1=new Equipe(212, "MAROC", "ZAKI", new Date()); Equipe
+	 * equipe2=new Equipe(033, "FRANCE", "ZIDANE", new Date()); Equipe equipe3=new
+	 * Equipe(213, "CAMEROUNE", "ROLANDO", new Date()); Equipe equipe4=new
+	 * Equipe(214, "Algerie", "ROLANDO", new Date());
+	 * equipeRepository.save(equipe1); equipeRepository.save(equipe2);
+	 * equipeRepository.save(equipe3); equipeRepository.save(equipe4);
+	 * joueurRepository.save(new Joueur(null, "ziache", "hakim", 25,equipe1 ));
+	 * joueurRepository.save(new Joueur(null, "MBAPE", "kylian", 26,equipe2 ));
+	 * joueurRepository.save(new Joueur(null, "Vincent", " aboubakar", 27,equipe3
+	 * ));
+	 * 
+	 * }; }
+	 */
 
 }
