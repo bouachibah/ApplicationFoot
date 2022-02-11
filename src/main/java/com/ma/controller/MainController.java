@@ -37,14 +37,26 @@ public class MainController {
 	  public String getAllJoueur(Model model){
 		List<Joueur>lesjoueurs= joueurRepository.findAll();
 		  model.addAttribute("lesjoueurs",lesjoueurs);
-		  return "listJoueur";
-		  
+		  return "listJoueur";		  
 	  }
   @PostMapping("/save")
    public String saveEquipe(Equipe equipe) {
 	   equipeRepository.save(equipe);	
 	   return "redirect:/equipes";
    }
+  
+  @PostMapping("/add")
+  public String saveJoueur(Joueur joueur) {
+	   joueurRepository.save(joueur);	
+	   return "redirect:/joueurs";
+  }
+  
+  @GetMapping("/formJoueur")
+  public String formJoueur(Model model) {
+	  List<Equipe>lesequipes= equipeRepository.findAll();
+	  model.addAttribute("lesequipes",lesequipes);
+	   return "formJoueur";
+  }
   
  //@RequestMapping(value="/form",method = RequestMethod.GET)
   @GetMapping("/form")

@@ -21,17 +21,17 @@ public class ApplicationFootApplication {
 		
 		
 	}
-	@Autowired
-	JoueurRepository joueurRepositor;
-	
 	/*
-	 * @Bean CommandLineRunner start(JoueurRepository
-	 * joueurRepository,EquipeRepository equipeRepository) { //teste return args->{
+	 * @Autowired JoueurRepository joueurRepository;
 	 * 
-	 * Equipe equipe1=new Equipe(212, "MAROC", "ZAKI", new Date()); Equipe
-	 * equipe2=new Equipe(033, "FRANCE", "ZIDANE", new Date()); Equipe equipe3=new
-	 * Equipe(213, "CAMEROUNE", "ROLANDO", new Date()); Equipe equipe4=new
-	 * Equipe(214, "Algerie", "ROLANDO", new Date());
+	 * @Bean CommandLineRunner start(JoueurRepository
+	 * joueurRepository,EquipeRepository equipeRepository) {
+	 * 
+	 * return args->{
+	 * 
+	 * Equipe equipe1=new Equipe(212, "MAROC", "ZAKI"); Equipe equipe2=new
+	 * Equipe(033, "FRANCE", "ZIDANE"); Equipe equipe3=new Equipe(213, "CAMEROUNE",
+	 * "ROLANDO"); Equipe equipe4=new Equipe(214, "Algerie", "ROLANDO");
 	 * equipeRepository.save(equipe1); equipeRepository.save(equipe2);
 	 * equipeRepository.save(equipe3); equipeRepository.save(equipe4);
 	 * joueurRepository.save(new Joueur(null, "ziache", "hakim", 25,equipe1 ));
@@ -43,3 +43,5 @@ public class ApplicationFootApplication {
 	 */
 
 }
+
+
